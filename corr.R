@@ -9,7 +9,7 @@ corr <- function(directory, threshold = 0) {
     ids <-  df[df["nobs"] > threshold, ]$id
     corrr <- numeric()
     for (i in ids) {
-        print(ids)
+     
         ReadFile <-  read.csv(paste(directory, "/", formatC(i, width = 3, flag = "0"), 
                                     ".csv", sep = ""))
         dff <-  ReadFile[complete.cases(ReadFile), ]
